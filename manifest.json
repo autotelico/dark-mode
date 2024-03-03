@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode",
+  "description": "Makes your webpage dark.",
+  "version": "1.0",
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/content.js"]
+    }
+    ],
+  "action": {
+    "default_icon": {
+      "16": "images/dark-mode.svg",
+      "32": "images/dark-mode.svg",
+      "48": "images/dark-mode.svg",
+      "128": "images/dark-mode.svg"
+    }
+  },
+  "permissions": ["activeTab", "scripting"]
+}
